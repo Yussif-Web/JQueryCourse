@@ -1,6 +1,9 @@
-.highLight{
-  color:  #00F;
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: #CFC;
 }
-.item{
-  margin-left: 8px;
+
+.highlight{
+  background-color: #FCC;
 }
