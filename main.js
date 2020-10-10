@@ -28,4 +28,7 @@ html += '</div>;
 $('#container').prepend(html);
 
 });
+$('container').on('click','.item-remove', function(){
+$(this).parent().remove();
+});
 });
