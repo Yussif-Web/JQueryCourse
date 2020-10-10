@@ -16,7 +16,7 @@ html += '<div class="description">Lorem ipsum dolor sit
 html += '<div class="price">499</div>';
 html += '<button>Add to cards</button>';
 html += '<br/>';
-html += '<div href = "#">More info</div>';
+html += '<a class="more-info-link" href = "#">More info</a>';
 html += '<div class="more-info">Lorem ipsum dolor sit, amet
           consectetur adipisicing elit. Porro cumque enim
            quisquam saepe non quos optio, neque labore
@@ -26,8 +26,14 @@ html += '<div class="more-info">Lorem ipsum dolor sit, amet
 html += '</div>;
 
 $('#container').prepend(html);
-
 });
+$('container').on('click','.more-info-link',function(event)
+{
+  event.preventDefault();
+
+  $(this).parent().find('.more-info').toggle();
+});
+
 $('container').on('click','.item-remove', function(){
 $(this).parent().remove();
 });
